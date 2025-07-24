@@ -7,18 +7,10 @@ public class ButtonScript : MonoBehaviour
     public Vector2 Detectbounds;
     public Transform DetectOrigin;
     public LayerMask AcceptedLayers;
-
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
-
+    
     // Update is called once per frame
     void Update()
     {
-
-
         Collider2D[] colls = Physics2D.OverlapBoxAll(DetectOrigin.position, Detectbounds, 0, AcceptedLayers);
         if (colls.Length > 0 )
         {
